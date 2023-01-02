@@ -1,0 +1,333 @@
+/* === CSS Reset ================================== */
+/* ================================================ */
+/* #region */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* #endregion */
+
+/* === Variables ================================== */
+/* ================================================ */
+/* #region */
+
+:root {
+    --color-primary-100: hsl(25, 97%, 53%);
+
+    --color-neutral-100: hsl(0, 0%, 100%);
+    --color-neutral-200: hsl(217, 12%, 63%);
+    --color-neutral-300: hsl(216, 12%, 54%);
+    --color-neutral-400: hsl(213, 19%, 18%);
+    --color-neutral-500: hsl(216, 12%, 8%);
+
+    --fs-50: 0.70rem;    /* 11px */
+    --fs-100: 0.88rem;   /* 14px */
+    --fs-200: 0.94rem;   /* 15px */
+    --fs-300: 1.00rem;   /* 16px */
+    --fs-400: 1.50rem;   /* 24px */
+    --fs-500: 1.75rem;   /* 28px */
+    
+    --lh-100: 1.13rem;   /* 18px */
+    --lh-200: 1.38rem;   /* 22px */
+    --lh-300: 1.50rem;   /* 24px */
+    --lh-400: 1.88rem;   /* 30px */
+    --lh-500: 2.19rem;   /* 35px */
+}
+/* #endregion */
+
+/* === Global Styles ============================== */
+/* ================================================ */
+/* #region */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-neutral-500);
+    font-family: 'Overpass', sans-serif;
+}
+
+/* #endregion */
+
+/* === Main Styles ================================ */
+/* ================================================ */
+/* #region */
+
+main {
+    box-sizing: border-box;
+    max-width: 25.75rem;
+    height: 26rem;
+    border-radius: 0.94rem;
+    margin: 0 1.5rem;
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+}
+
+/* Rating Component Before */
+
+#rating-component-before {
+    margin: 2rem;
+}
+
+.rating-component-before__top-left-star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-bottom: 1.88rem;
+    background-color: var(--color-neutral-400);
+}
+
+.rating-component-before__heading {
+    margin-bottom: 0.94rem;
+    color: var(--color-neutral-100);
+    font-size: var(--fs-500);
+    font-weight: bold;
+    line-height: var(--lh-500);
+}
+
+.rating-component-before__description {
+    margin-bottom: 1.5rem;
+    color: var(--color-neutral-200);
+    font-size: var(--fs-200);
+    line-height: var(--lh-300);
+}
+
+.container-for-rating-state-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.rating-state-btn {
+    width: 3.19rem;
+    height: 3.19rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-neutral-400);
+    color: var(--color-neutral-300);
+    font-family: 'Overpass', sans-serif;
+    font-size: var(--fs-300);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rating-state-btn:active {
+    transform: scale(0.85);
+}
+
+.rating-state-btn:hover {
+    background-color: var(--color-primary-100) !important;
+    color: var(--color-neutral-100);
+}
+
+#submit {
+    width: 100%;
+    height: 2.8rem;
+    border: none;
+    border-radius: 1.4rem;
+    background-color: var(--color-primary-100);
+    color: var(--color-neutral-100);
+    font-family: 'Overpass', sans-serif;
+    font-size: var(--fs-200);
+    font-weight: bold;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+#submit:active {
+    transform: scale(0.99);
+}
+
+#submit:hover {
+    background-color: var(--color-neutral-100);
+    color: var(--color-primary-100);
+}
+
+#submit-pop-up-msg {
+    display: none;
+    margin-top: -0.95rem;
+    margin-bottom: 0.1rem;
+    color: var(--color-primary-100);
+    font-size: var(--fs-100);
+    text-align: center;
+    letter-spacing: 0.13rem;
+}
+
+/* Rating Component After */
+
+#rating-component-after {
+    display: none;
+    margin: 2.81rem 2rem;
+    text-align: center;
+}
+
+.rating-component-after__state-result-sentence {
+    box-sizing: border-box;
+    width: 70%;
+    height: 2rem;
+    padding-top: 0.6rem;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    background-color: var(--color-neutral-400);
+    color: var(--color-primary-100);
+    font-size: var(--fs-200);
+}
+
+.rating-component-after__thank-you-text {
+    margin-bottom: 0.94rem;
+    color: var(--color-neutral-100);
+    font-size: var(--fs-500);
+    font-weight: bold;
+    line-height: var(--lh-500);
+}
+
+.rating-component-after__appreciate-text {
+    color: var(--color-neutral-300);
+    font-size: var(--fs-200);
+    line-height: var(--lh-300);
+}
+
+/* #endregion */
+
+/* === Query Media ================================ */
+/* ================================================ */
+/* #region */
+
+@media only screen and (max-width: 450px) {
+
+    main {
+        height: 22.5rem;
+    }
+
+    #rating-component-before {
+        margin: 1.5rem;
+    }
+
+    .rating-component-before__top-left-star {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .rating-component-before__heading {
+        margin-bottom: 1.06rem;
+        font-size: var(--fs-400);
+        line-height: var(--lh-400);
+    }
+    
+    .rating-component-before__description {
+        font-size: var(--fs-100);
+        line-height: var(--lh-200);
+    }
+    
+    .container-for-rating-state-btn {
+        margin-bottom: 1.5rem;
+    }
+    
+    .rating-state-btn {
+        width: 2.63rem;
+        height: 2.63rem;
+        font-size: var(--fs-100);
+    }
+    
+    #submit {
+        font-size: var(--fs-100);
+        letter-spacing: 0.12rem;
+    }
+    
+    #submit-pop-up-msg {
+        font-size: var(--fs-50);
+        letter-spacing: 0.12rem;
+    }
+    
+    #rating-component-after {
+        margin: 2.25rem 1.5rem;
+    }
+
+    #rating-component-after img {
+        width: 9rem;
+        height: 6rem;
+    }
+    
+    .rating-component-after__state-result-sentence {
+        padding-top: 0.65rem;
+        margin: 1.5rem auto;
+        font-size: var(--fs-100);
+    }
+    
+    .rating-component-after__thank-you-text {
+        margin-bottom: 1.06rem;
+        font-size: var(--fs-400);
+        line-height: var(--lh-400);
+    }
+    
+    .rating-component-after__appreciate-text {
+        font-size: var(--fs-100);
+        line-height: var(--lh-200);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    main {
+        height: 23rem;
+        margin: 0;
+    }
+
+    #rating-component-after {
+        margin: 2rem 1rem;
+    }
+    
+    .rating-component-after__state-result-sentence {
+        width: 90%;
+    }
+}
+
+/* #endregion */
